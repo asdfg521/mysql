@@ -10,9 +10,12 @@ def Segmentation(): #分割txt
             i=0
             j=0
             for ips in file:
-            
-   
-                    Blast("ips.txt")
+                if i>=5000:
+                    f=open("iplist"+str(j)+".txt",'a+')
+                    f.write(ips)
+                    i+=1
+                else:
+                    Blast("ips"+".txt")
                     i=0
                     j+=1
     except IOError:
@@ -26,20 +29,9 @@ def Blast(fileNames):#爆破
 
 def run():
 
-    print("""
-    
-    __  ___      _____       __   ____  __           __
-   /  |/  /_  __/ ___/____ _/ /  / __ )/ /___ ______/ /_
-  / /|_/ / / / /\__ \/ __ `/ /  / __  / / __ `/ ___/ __/
- / /  / / /_/ /___/ / /_/ / /  / /_/ / / /_/ (__  ) /_
-/_/  /_/\__, //____/\__, /_/  /_____/_/\__,_/____/\__/
-       /____/         /_/
-
-    
-    """)
+    print(""" QQ228393654 """)
 
     Segmentation()
-
 
 if __name__ == '__main__':
     run()
