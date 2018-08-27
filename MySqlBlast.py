@@ -10,12 +10,9 @@ def Segmentation(): #分割txt
             i=0
             j=0
             for ips in file:
-                if i<=5000:
-                    f=open("iplist"+str(j)+".txt",'a+')
-                    f.write(ips)
-                    i+=1
-                else:
-                    Blast("iplist"+str(j)+".txt")
+            
+   
+                    Blast("ips.txt")
                     i=0
                     j+=1
     except IOError:
